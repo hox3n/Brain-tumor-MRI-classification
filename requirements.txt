@@ -1,0 +1,14 @@
+# Core
+tensorflow==2.18.0        # native Windows is CPU-only; see README for GPU notes
+numpy>=1.26,<2.2
+pyyaml>=6.0
+
+# Data
+kagglehub>=0.3.0
+
+# Metrics and figures
+scikit-learn>=1.4
+matplotlib>=3.8
+
+# Notebook walkthrough (optional)
+jupyter>=1.0

@@ -216,3 +216,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- Project-specific ---
+# Dataset is downloaded via kagglehub on first run (see README)
+data/
+dataset/
+
+# Trained weights and training logs
+models/
+logs/
+
+# Generated metrics (figures in reports/figures are committed for the README)
+reports/metrics/

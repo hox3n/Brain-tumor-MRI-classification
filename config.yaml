@@ -1,0 +1,38 @@
+# Single source of truth for hyperparameters and paths.
+# Override any value from the CLI, e.g. `python -m src.train --arch elu_bn --epochs 60`.
+
+data:
+  kaggle_dataset: masoudnickparvar/brain-tumor-mri-dataset
+
+  classes:
+    - glioma
+    - meningioma
+    - pituitary
+
+  image_size: [128, 128]
+  color_mode: grayscale
+  val_split: 0.15
+  seed: 1234
+
+train:
+  batch_size: 64
+  epochs: 40
+  learning_rate: 0.001
+  dropout: 0.4
+
+  # since the orientiation matters for this task any flippings or 
+  # considerable rotations should be small or not present
+  augment: true
+  rotation: 0.05
+  zoom: 0.10
+
+  early_stopping_patience: 8
+  reduce_lr_patience: 4
+  reduce_lr_factor: 0.5
+
+paths:
+  data_dir: data
+  models_dir: models
+  logs_dir: logs
+  figures_dir: reports/figures
+  metrics_dir: reports/metrics
